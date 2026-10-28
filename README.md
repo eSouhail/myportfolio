@@ -32,6 +32,10 @@ npm run preview
 
 ## Deploy
 
-Run `npm run build`, then publish the generated `dist/` directory to a static host. For a Git-connected host, use `npm run build` as the build command and `dist` as the output directory. The site requires no backend or SPA redirects. For hosting below a subdirectory, configure Vite’s `base` and adjust the favicon path.
+GitHub Actions builds and deploys pushes to `main` using `.github/workflows/deploy.yml`.
+In the repository’s Settings → Pages, select **GitHub Actions** as the source.
+Follow deployment progress in the Actions tab. After a successful deployment, visit
+https://esouhail.github.io/myportfolio/.
 
-Publication requires the owner’s approval; this implementation has not been published.
+Vite’s base is configured for `/myportfolio/`. Change it if the repository name or hosting path changes.
+For another static host, run `npm run build` and publish `dist/` with an appropriate base path.
